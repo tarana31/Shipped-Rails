@@ -1,2 +1,9 @@
 <h1>Welcome</h1>
-  <%= link_to "Sign in", '/users/sign_in' %><br />
+  <% if current_user %>
+    <%= link_to('sign-out',destroy_user_session_path, method: :delete)%>
+  <% else %>  
+    <%= link_to('Sign-in', new_user_session_path)%>
+  <% end %>  
+
+  
+  
