@@ -10,15 +10,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-    
+        <% if !current_user %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
- 
+        <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <li><a href="#">Schedule</a></li>
         <li><a href="#">Boats</a></li>
         <li><a href="#">Jobs</a></li>
-      
+        <% end %>
       </ul>
     </div>
   </div>
@@ -29,14 +29,14 @@
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>Shipping</h2>
       <ul class="nav nav-pills nav-stacked">
-
+        <% if !current_user %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
- 
+        <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <li><a href="#">Schedule</a></li>
         <li><a href="#">Boats</a></li>
         <li><a href="#">Jobs</a></li>
-    
+        <% end %>
       </ul><br>
     </div>
