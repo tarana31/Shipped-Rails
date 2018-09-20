@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :date %>
-    <%= form.datetime_select :date %>
+    <%= form.datetime_select :date, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :origin %>
-    <%= form.text_field :origin %>
+    <%= form.text_field :origin, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :destination %>
-    <%= form.text_field :destination %>
+    <%= form.text_field :destination, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :boat_id %>
-    <%= form.number_field :boat_id %>
+    <%= form.number_field :boat_id, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :job_id %>
-    <%= form.number_field :job_id %>
+    <%= form.number_field :job_id, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group">
+    <%= form.submit class: "btn btn-primary"%>
   </div>
 <% end %>
