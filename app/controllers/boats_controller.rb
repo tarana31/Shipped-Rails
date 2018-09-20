@@ -8,6 +8,7 @@ class BoatsController < ApplicationController
 
   # GET /boats/1
   def show
+    @boat = Boat.find(params[:id])
   end
 
   # GET /boats/new
@@ -17,6 +18,7 @@ class BoatsController < ApplicationController
 
   # GET /boats/1/edit
   def edit
+    @boat = Boat.find(params[:id])
   end
 
   # POST /boats
@@ -47,11 +49,11 @@ class BoatsController < ApplicationController
 
   private
     def set_boat
-      @boat = Boat.find(params[:id])
+      @boat = Boat.find(params[:id])  
     end
 
 
     def boat_params
-      params.require(:boat).permit(:name, :max_containers, :location, :description, :contact, :boat_id, :user_id)
+      params.require(:boat).permit(:name, :max_containers, :location, :description, :contact,:user_id, :job_id)
     end
 end
