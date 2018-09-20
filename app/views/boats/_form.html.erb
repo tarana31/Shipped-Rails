@@ -11,32 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :max_containers %>
-    <%= form.number_field :max_containers %>
+    <%= form.number_field :max_containers, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.text_field :location, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :contact %>
-    <%= form.text_field :contact %>
+    <%= form.text_field :contact, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="field form-group">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, class: "form-control" %>
+  </div>
+
+  <div class="actions form-group">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
