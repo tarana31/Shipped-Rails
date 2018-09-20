@@ -23,14 +23,14 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
 
-    respond_to do |format|
+  
       if @job.save
         redirect_to @job
 
       else
         render :new 
       end
-    end
+    
   end
 
   # PATCH/PUT /jobs/1

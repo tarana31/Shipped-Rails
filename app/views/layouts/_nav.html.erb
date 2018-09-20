@@ -15,9 +15,9 @@
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">Boats</a></li>
-        <li><a href="#">Jobs</a></li>
+        <li><%= link_to "Schedules", schedules_path %></li>
+        <li><%= link_to "Boats", boats_path %></li>
+        <li><%= link_to "Jobs", jobs_path %></li>
         <% end %>
       </ul>
     </div>
@@ -34,9 +34,10 @@
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">Boats</a></li>
-        <li><a href="#">Jobs</a></li>
+         <li><%= link_to "Schedules", schedules_path %></li>
+        <li><%= link_to "Boats", boats_path %></li>
+        <li><%= link_to "Jobs", jobs_path %></li>
+        
         <% end %>
       </ul><br>
     </div>
