@@ -3,15 +3,27 @@
   
     
     Jobs:
-     <%= link_to 'List All Jobs', jobs_path %>
-    
-        
-  <% else %>  
-   
-      
-      <p><%= image_tag("ship1.jpg", alt: "shipping dock") %></p>
-   
+    <%= link_to 'List All Jobs', jobs_path %>    
 
-  <% end %>  
+<div id="boats-owned">
+    <h4>Boats Owned</h4>
+    <% boats = current_user.boats %>
+    <% boats.each do |b| %>
+        <div id="boats-grid">
+            <div class="">
+                <strong>Name: </strong><%= b.name %>
+            </div>
+            <div class="">
+                <strong>Location: </strong><%= b.location %>
+            </div>
+            <div class="">
+                <strong>No. of Containers: </strong><%= b.max_containers %>
+            </div>
+        </div>
+    <% end %>
+</div>
+<% else %>  
+    <p><%= image_tag("ship1.jpg", alt: "shipping dock") %></p>
+<% end %>  
 
   
