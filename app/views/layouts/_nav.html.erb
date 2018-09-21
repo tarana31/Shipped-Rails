@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse visible-xs">
+  <nav class="navbar navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -10,15 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <% if !current_user %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% else %>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <li><%= link_to "Schedules", schedules_path %></li>
-        <li><%= link_to "Boats", boats_path %></li>
-        <li><%= link_to "Jobs", jobs_path %></li>
-        <% end %>
+          <%= render 'layouts/navlist' %>
       </ul>
     </div>
   </div>
@@ -29,15 +21,7 @@
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>Shipping</h2>
       <ul class="nav nav-pills nav-stacked">
-        <% if !current_user %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% else %>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-         <li><%= link_to "Schedules", schedules_path %></li>
-        <li><%= link_to "Boats", boats_path %></li>
-        <li><%= link_to "Jobs", jobs_path %></li>
-        
-        <% end %>
-      </ul><br>
+             <%= render 'layouts/navlist' %>
+      </ul>
+      <br>
     </div>

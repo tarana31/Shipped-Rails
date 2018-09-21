@@ -35,15 +35,18 @@
   </style>
 </head>
 <body>
-   <%= render 'layouts/nav' %>
+
+
+    <%= render 'layouts/nav' %>
+
     <br>
-  
+    <p class="notice"><%= notice %></p>
+    <!--<p class="alert"><%= alert %></p>-->
     <div class="col-sm-9">
       <div class="well">
-        <h4>Dashboard</h4>
-
-    <%= yield %>
+          <%= yield %>
       </div>
+     
     </div>
   </div>
 </div>
