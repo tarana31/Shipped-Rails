@@ -14,12 +14,36 @@
  *= require_self
  */
 
- 
-
 
 form{
     margin: 25px;
+
 }
  .btn{
      margin: 10px;
  }
+
+ .notice{
+     background: lightblue;
+     padding-left: 20px;
+ }
+
+ .alert{
+     background: lightcoral;
+ }
+
+.row.content {
+    height: 100vh;
+}
+
+ img{
+     width: 100%;
+     max-width: 800px;
+ }
+
+//  .sidenav{
+//      background: #101010;
+//      a{
+//          color:white;
+//      }
+//  }
