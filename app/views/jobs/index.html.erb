@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Title</th>
       <th>Description</th>
       <th>Cost</th>
       <th>Containers needed</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
+        <td><%= job.title %></td>
         <td><%= job.description %></td>
         <td><%= job.cost %></td>
         <td><%= job.containers_needed %></td>

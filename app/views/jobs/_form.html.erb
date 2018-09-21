@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
     <%= form.label :description %>
     <%= form.text_area :description, class: "form-control" %>
   </div>
 
   <div class="field form-group">
     <%= form.label :cost %>
-    <%= form.text_field :cost, class: "form-control" %>
+    <%= form.text_field :cost,min: 1000, max: 100000,  value: 1000.0, class: "form-control" %>
   </div>
 
   <div class="field form-group">
@@ -27,13 +32,13 @@
   </div>
 
   <div class="field form-group">
-    <%= form.label :boat_id %>
-    <%= form.number_field :boat_id, class: "form-control" %>
+    <%= form.label :boat_id %><br/>
+    <%= form.collection_select(:boat_id, Boat.all, :id, :name, {}, {:class => "form-control"}) %>  
   </div>
+  
 
   <div class="field form-group">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, class: "form-control" %>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="actions form-group">

@@ -15,15 +15,9 @@
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<<<<<<< HEAD
-        <li><a href="#">Schedule</a></li>
-        <li><a href="/boats">Boats</a></li>
-        <li><a href="#">Jobs</a></li>
-=======
         <li><%= link_to "Schedules", schedules_path %></li>
         <li><%= link_to "Boats", boats_path %></li>
         <li><%= link_to "Jobs", jobs_path %></li>
->>>>>>> 7bab1a9122dd6f361a1e833760bb485495fec5f3
         <% end %>
       </ul>
     </div>
@@ -40,16 +34,10 @@
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <% else %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<<<<<<< HEAD
-        <li><a href="/schedules">Schedule</a></li>
-        <li><a href="/boats">Boats</a></li>
-        <li><a href="#">Jobs</a></li>
-=======
          <li><%= link_to "Schedules", schedules_path %></li>
         <li><%= link_to "Boats", boats_path %></li>
         <li><%= link_to "Jobs", jobs_path %></li>
         
->>>>>>> 7bab1a9122dd6f361a1e833760bb485495fec5f3
         <% end %>
       </ul><br>
     </div>

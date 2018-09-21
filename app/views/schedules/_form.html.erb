@@ -28,12 +28,12 @@
 
   <div class="field form-group">
     <%= form.label :boat_id %>
-    <%= form.number_field :boat_id, class: "form-control" %>
+    <%= form.collection_select(:boat_id, Boat.all, :id, :name, {}, {:class => "form-control"}) %>  
   </div>
 
   <div class="field form-group">
     <%= form.label :job_id %>
-    <%= form.number_field :job_id, class: "form-control" %>
+    <%= form.collection_select(:job_id, Job.all, :id, :title, {}, {:class => "form-control"}) %>  
   </div>
 
   <div class="actions form-group">
