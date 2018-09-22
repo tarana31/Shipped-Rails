@@ -1,9 +1,22 @@
 <% if current_user %>
 <h3>Welcome, user #<%= current_user.id %></h3>
   
+    <table class="table">
+    <tr><td>Jobs: </td>
+        <td><%= link_to 'List', jobs_path, class: "btn btn-info" %></td> 
+        <td><%= link_to "Add", new_job_path, class: "btn btn-success" %></td>
+    </tr>
+    <tr><td>Boats:</td>
+        <td><%= link_to 'List', boats_path, class: "btn btn-info" %></td>
+        <td><%= link_to "Add", new_boat_path, class: "btn btn-success" %></td>
+    </tr>
+    <tr><td>Schedule:</td>
+        <td><%= link_to 'List', schedules_path, class: "btn btn-info" %></td>
+        <td><%= link_to "Add", new_schedule_path, class: "btn btn-success" %></td>
+    </tr>
+    </table>
     
-    Jobs:
-    <%= link_to 'List All Jobs', jobs_path %>    
+
 
 <div id="boats-owned">
     <h4>Boats Owned</h4>
