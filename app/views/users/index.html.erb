@@ -1,6 +1,12 @@
 <% if current_user %>
 <h3>Welcome, user #<%= current_user.id %></h3>
-  
+
+<% if current_user.avatar.attached? %>
+<div id="myimage">
+    <%= image_tag(url_for(current_user.avatar))%>
+</div>
+<% end %>
+
     <table class="table">
     <tr><td>Jobs: </td>
         <td><%= link_to 'List', jobs_path, class: "btn btn-info" %></td> 
@@ -16,7 +22,6 @@
     </tr>
     </table>
     
-
 
 <div id="boats-owned">
     <h4>Boats Owned</h4>

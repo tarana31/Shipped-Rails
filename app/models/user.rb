@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :boats
   has_many :jobs
+  has_one_attached :avatar
 end
